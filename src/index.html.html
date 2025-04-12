@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te Amo Julia!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #ffe4e1, #f8c8dc);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            height: 100%; /* Ocupa toda a altura da tela */
+            overflow-y: auto; /* Permite a rolagem vertical */
+        }
+        h2 {
+            font-size: 2.5em;
+            margin-top: 20px;
+            color: #fff;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 10px 0;
+            color: #fff;
+        }
+        .contador, .quando-tudo-comecou {
+            font-size: 1.6em;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 20px;
+            display: inline-block;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 90%; /* Limita a largura para 90% */
+            width: auto;
+            text-align: center;
+        }
+        .swiper {
+            width: 80%;
+            max-width: 500px;
+            margin: 20px auto;
+            border: 5px solid #fff;
+            border-radius: 15px;
+        }
+        .swiper-slide img {
+            width: 80%;  /* Reduzindo o tamanho das imagens para 80% */
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+        .swiper-slide img:hover {
+            transform: scale(1.1);
+        }
+        .mensagem {
+            font-size: 1.6em;
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 15px;
+            border-radius: 20px;
+            display: inline-block;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        video {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .surprise-button {
+            background: #ff69b4;
+            color: white;
+            font-size: 1.5em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-top: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .heart {
+            position: absolute;
+            top: -50px;
+            font-size: 2em;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+        .heart.shiny {
+            animation: shine 1.5s infinite alternate;
+        }
+        @keyframes shine {
+            from { opacity: 0.3; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h2>Arthur & Julia 💑</h2>
+    <h1>Com carinho, coração e amor de Arthur Vinícius para Júlia Pereira Cândido💞</h1>
+    <div class="contador" id="contador"></div>
+
+    <!-- Quando tudo começou abaixo do contador -->
+    <div class="quando-tudo-comecou">
+        Quando tudo começou: 04/03/2020 às 22:53
+    </div>
+
+    <!-- Carrossel de fotos -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.34.jpeg" alt="Imagem 1"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.34 (1).jpeg" alt="Imagem 2"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.34 (2).jpeg" alt="Imagem 3"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.34 (3).jpeg" alt="Imagem 4"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.35.jpeg" alt="Imagem 5"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.35 (1).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.35 (2).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.35 (3).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.35 (4).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.36.jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.36 (1).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.36 (2).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.36 (3).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.37.jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.37 (1).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.37 (2).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.37 (3).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.38.jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.38 (1).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.38 (2).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.38 (3).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.39.jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.39 (1).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.39 (2).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.39 (3).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.39 (4).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.40.jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.40 (1).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.40 (2).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.40 (3).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.41.jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.41 (1).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.41 (2).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.41 (3).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.42.jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.42 (1).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.42 (2).jpeg" alt="Imagem 6"></div>
+            <div class="swiper-slide"><img src="WhatsApp Image 2025-04-02 at 02.39.42 (3).jpeg" alt="Imagem 6"></div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    
+    <p class="mensagem">Júlia, você é luz pra mim, você constrói meus dias, molda meus sorrisos, arquiteta meus pensamentos e traz luz a meus sentimentos, você é uma pessoa que sabe tudo sobre mim, sabe como me fazer feliz e como me sinto, meus dias com você são como flores, mas sem você, são como campos sem flores, sem vida, sem cor e sem graça, você é tudo que sempre sonhei, você é engraçada, carismática, Gentil, educada, linda e com um coração enorme, você é tudo pra mim.
+
+        É uma honra imensa pra mim acordar e ver sua mensagem de bom dia, é uma honra pra mim ver que uma pessoa tão linda e especial como vc sente o mesmo que eu, saiba que você é e sempre será o amor da minha vida.
+        
+        Eu espero passar anos da minha vida com você ao meu lado, Eu te amo, Julia ❤️</p>
+    
+    <div class="video-container">
+        <video id="videoPlayer" autoplay loop controls>
+            <source src="youtube_dFr4NU9C0HE_1280x720_h264.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
+        </video>
+    </div>
+    
+    <button class="surprise-button" onclick="alert('Feliz Aniversario amor, Eu Te Amo! 💖')">Clique para uma surpresa</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const dataInicio = new Date("2020-03-04T22:53:00");
+        function atualizarContador() {
+            setInterval(() => {
+                const agora = new Date();
+                const diferenca = agora - dataInicio;
+                const anos = Math.floor(diferenca / (1000 * 60 * 60 * 24 * 365));
+                const dias = Math.floor((diferenca % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
+                const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+                const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+                document.getElementById("contador").innerText = `Juntos há ${anos} anos, ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos!`;
+            }, 1000);
+        }
+        atualizarContador();
+        
+        function criarCoracoes() {
+            setInterval(() => {
+                const heart = document.createElement("div");
+                heart.classList.add("heart");
+                heart.innerHTML = Math.random() > 0.5 ? "❤️" : "🤍";
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+                heart.style.opacity = 0.3;
+                if (Math.random() > 0.8) heart.classList.add("shiny");
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 5000);
+            }, 300);
+        }
+        criarCoracoes();
+
+        // Iniciando o carrossel com autoplay
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+                delay: 3000,  // Intervalo de 3 segundos
+                disableOnInteraction: false,  // Permite que o carrossel continue mesmo após interação
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+</html>
